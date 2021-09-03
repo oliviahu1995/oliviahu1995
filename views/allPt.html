@@ -25,7 +25,7 @@
         <tr>
             <td><%= pts[i].fullName%></td>
             <td><%= pts[i].age%></td>
-            <td><%= pts[i].dateVisit%></td>
+            <td><%= moment(pts[i].dateVisit).format('DD/MM/YYYY')%></td>
             <td><%= pts[i].doctor.fullName.firstName%></td>
             <td><%= pts[i].doctor.fullName.lastName%></td>
             <td><%= pts[i].case%></td>
