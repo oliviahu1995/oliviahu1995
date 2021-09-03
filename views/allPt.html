@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Patients</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>FIT2095 CLINIC</h1>
+    <h2>Here are all the patients</h2>
+    <p><a href="/">Home</a></p>
+    <p><a href="/addDoc">Add Doctor</a></p>
+    <p><a href="/addPt">Add Patient</a></p>
+    <p><a href="/allDoc">List Doctors</a></p>
+    <p><a href="/deletePt">Delete Patient</a></p>
+    <p><a href="/updateDoc">Update Doctor</a></p>
+
+    <table>
+        <tr>
+            <th>Full Name</th> <th>Age</th> <th>Date Visit</th> <th>Doc First Name</th> <th>Doc Last Name</th> <th>Case Description</th> 
+        </tr>
+        <% for (let i=0;i < pts.length;i++){ %>
+        <tr>
+            <td><%= pts[i].fullName%></td>
+            <td><%= pts[i].age%></td>
+            <td><%= pts[i].dateVisit%></td>
+            <td><%= pts[i].doctor.fullName.firstName%></td>
+            <td><%= pts[i].doctor.fullName.lastName%></td>
+            <td><%= pts[i].case%></td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>

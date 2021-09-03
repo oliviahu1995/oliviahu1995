@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete a patient</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <p><a href="/">Home</a></p>
+    <p><a href="/addDoc">Add Doctor</a></p>
+    <p><a href="/allDoc">List Doctors</a></p>
+    <p><a href="/addPt">Add Patient</a></p>
+    <p><a href="/allPt">List Patients</a></p>
+    <p><a href="/updateDoc">Update Doctor</a></p>
+    
+    <h2>Delete a patient by full name</h2>
+    <form action="/deletePtInfo" method="POST">
+        <p>Patient Full Name: <input type="text" name="fullName"></p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

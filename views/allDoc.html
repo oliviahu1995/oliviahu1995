@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Doctors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>FIT2095 CLINIC</h1>
+    <h2>Here are all the doctors</h2>
+    <p><a href="/">Home</a></p>
+    <p><a href="/addDoc">Add Doctor</a></p>
+    <p><a href="/addPt">Add Patient</a></p>
+    <p><a href="/allPt">List Patients</a></p>
+    <p><a href="/deletePt">Delete Patient</a></p>
+    <p><a href="/updateDoc">Update Doctor</a></p>
+    <table>
+        <tr>
+            <th>First Name</th> <th>Last Name</th> <th>Date of Birth</th> <th>State</th> <th>Suburb</th> <th>Street</th> <th>Unit</th> <th>Patient Number</th> <th>ID</th>
+        </tr>
+        <% for (let i=0;i < docs.length;i++){ %>
+        <tr>
+            <td><%= docs[i].fullName.firstName%></td>
+            <td><%= docs[i].fullName.lastName%></td>
+            <td><%= moment(docs[i].dateOfBirth).format('DD/MM/YYYY')%></td>
+            <td><%= docs[i].address.state%></td>
+            <td><%= docs[i].address.suburb%></td>
+            <td><%= docs[i].address.street%></td>
+            <td><%= docs[i].address.unit%></td>
+            <td><%= docs[i].numPatients%></td>
+            <td><%= docs[i]._id%></td>
+        </tr>
+        <%}%>
+    </table>
+</body>
+</html>

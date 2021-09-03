@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a patient</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>FIT2095 CLINIC</h1>
+    <h2>Please add a new patient</h2>
+    <p><a href="/">Home</a></p>
+    <p><a href="/allDoc">List Doctors</a></p>
+    <p><a href="/addDoc">Add Doctor</a></p>
+    <p><a href="/allPt">List Patients</a></p>
+    <p><a href="/deletePt">Delete Patient</a></p>
+    <p><a href="/updateDoc">Update Doctor</a></p>
+    <form action="/addPtInfo" method="POST">
+        <p>Full Name<input type="text" name="fullName" value="cannot be empty"></p>
+        <p>Doctor <input type="text" name="doc"></p>
+        <p>Age <input type="number" name="age"></p>
+        <p>Date of Visit<input type="date" name="date"></p>
+        <p>Case Description<input type="text" name="case" value="at least 10 characters"></p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>
